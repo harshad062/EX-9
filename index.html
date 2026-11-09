@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halcyon Cove Local Guide</title>
+  <meta name="description" content="A local guide to the places, food and walks of Halcyon Cove, with a day planner.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#places">Skip to places</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top">Halcyon Cove <span>Local Guide</span></a>
+    <nav aria-label="Main">
+      <a href="#places">Places</a>
+      <a href="#plan">Your day</a>
+      <a href="#practical">Practical</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="hero-note">Written by people who live here</p>
+      <h1 id="hero-title">Halcyon Cove, planned around low tide and good bread.</h1>
+      <p class="hero-lede">
+        Eight places worth your time, from a windy headland to a market that has
+        not changed its layout since the war. Pick what suits your day, and the
+        planner will tell you how long it takes.
+      </p>
+      <a class="btn btn-solid btn-large" href="#places">Browse the places</a>
+    </section>
+
+    <div class="layout">
+
+      <section id="places" class="places" aria-labelledby="places-title">
+        <div class="places-head">
+          <h2 id="places-title">Places to go</h2>
+          <p id="count" class="count" aria-live="polite"></p>
+        </div>
+
+        <div class="controls">
+          <label class="field">
+            <span>Search</span>
+            <input id="search" type="search" placeholder="Try ‘walk’ or ‘museum’" autocomplete="off">
+          </label>
+          <label class="field">
+            <span>Sort by</span>
+            <select id="sort">
+              <option value="name">Name</option>
+              <option value="time">Shortest visit</option>
+              <option value="cost">Cheapest</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="chips" class="chips" role="group" aria-label="Filter by category"></div>
+
+        <ul id="place-list" class="place-list"></ul>
+        <p id="empty" class="empty" hidden>No places match that search. Try a shorter word or clear the filter.</p>
+      </section>
+
+      <aside id="plan" class="plan" aria-labelledby="plan-title">
+        <h2 id="plan-title">Your day</h2>
+        <p id="plan-total" class="plan-total"></p>
+        <ol id="plan-list" class="plan-list"></ol>
+        <button id="clear-plan" type="button" class="btn btn-ghost btn-small">Clear plan</button>
+      </aside>
+
+    </div>
+
+    <section id="practical" class="practical" aria-labelledby="practical-title">
+      <h2 id="practical-title">Practical notes</h2>
+      <div class="practical-grid">
+        <div>
+          <h3>Getting around</h3>
+          <p>Most places are within a twenty-minute walk of the harbour. The Coast Loop bus leaves the ferry terminal every forty minutes.</p>
+        </div>
+        <div>
+          <h3>When to visit</h3>
+          <p>Spring and autumn are mild and quiet. Summer weekends fill up by eleven in the morning, so start early or go on a weekday.</p>
+        </div>
+        <div>
+          <h3>Good to know</h3>
+          <p>Many shops close on Sunday afternoons. Keep some cash for the market stalls and the harbour parking meter.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Halcyon Cove Local Guide. Last checked <span id="year"></span>. Opening times change, so confirm before you travel.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
